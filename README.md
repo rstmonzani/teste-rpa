@@ -22,13 +22,13 @@ O time de Operações precisa de um **Monitor de Catálogo** com três peças:
 - É permitido consultar documentação oficial e buscadores.
 - É permitido instalar bibliotecas auxiliares. Não é permitido usar pacotes ou scripts prontos que resolvam o desafio.
 - Use Playwright para a automação web. Se optar por outra abordagem em alguma etapa, explique o motivo.
-- Uso de assistentes de IA: **[PERMITIDO / NÃO PERMITIDO — definir antes de enviar]**
+- Uso de assistentes de IA: **[NÃO PERMITIDO]**
 
 ---
 
 ## Parte 1 — Sistema legado (≈ 15 min)
 
-**Site:** https://rpachallenge.com/
+**Site:** <https://rpachallenge.com/>
 
 1. Pelo próprio robô, baixe a planilha pelo botão **Download Excel** e leia os registros.
 2. Clique em **Start** e cadastre cada registro no formulário, clicando em **Submit** após cada um.
@@ -42,7 +42,7 @@ O time de Operações precisa de um **Monitor de Catálogo** com três peças:
 
 ## Parte 2 — Coleta do catálogo completo (≈ 30 min)
 
-**Site:** https://books.toscrape.com/
+**Site:** <https://books.toscrape.com/>
 
 Colete **todos os livros do catálogo**. Para cada livro, colete os seguintes dados:
 
@@ -78,12 +78,12 @@ Colete **todos os livros do catálogo**. Para cada livro, colete os seguintes da
 
 Exponha os dados coletados na Parte 2:
 
-| Método | Rota | Descrição |
-|---|---|---|
-| GET | `/livros` | Lista livros com filtros opcionais `categoria`, `avaliacao_min` e `preco_max`, e paginação por `pagina` e `tamanho`. Retorna também o total de resultados. |
-| GET | `/categorias/resumo` | Para cada categoria: quantidade de livros, preço médio e estoque total. |
-| POST | `/execucoes` | Dispara a coleta da Parte 2 em segundo plano (aceita `limite` opcional) e retorna um identificador. Se já houver uma execução em andamento, responde **409**. |
-| GET | `/execucoes/{id}` | Retorna o status da execução (rodando, concluída ou erro), os horários e a quantidade de livros novos. |
+| Método | Rota                 | Descrição                                                                                                                                                     |
+| ------ | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GET    | `/livros`            | Lista livros com filtros opcionais `categoria`, `avaliacao_min` e `preco_max`, e paginação por `pagina` e `tamanho`. Retorna também o total de resultados.    |
+| GET    | `/categorias/resumo` | Para cada categoria: quantidade de livros, preço médio e estoque total.                                                                                       |
+| POST   | `/execucoes`         | Dispara a coleta da Parte 2 em segundo plano (aceita `limite` opcional) e retorna um identificador. Se já houver uma execução em andamento, responde **409**. |
+| GET    | `/execucoes/{id}`    | Retorna o status da execução (rodando, concluída ou erro), os horários e a quantidade de livros novos.                                                        |
 
 ### Requisitos
 
