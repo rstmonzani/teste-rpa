@@ -26,7 +26,7 @@ O time de Operações precisa de um **Monitor de Catálogo** com três peças:
 
 ---
 
-## Parte 1 — Sistema legado (≈ 15 min)
+## Parte 1 — Sistema legado
 
 **Site:** <https://rpachallenge.com/>
 
@@ -40,7 +40,7 @@ O time de Operações precisa de um **Monitor de Catálogo** com três peças:
 
 ---
 
-## Parte 2 — Coleta do catálogo completo (≈ 30 min)
+## Parte 2 — Coleta do catálogo completo
 
 **Site:** <https://books.toscrape.com/>
 
@@ -74,7 +74,7 @@ Colete **todos os livros do catálogo**. Para cada livro, colete os seguintes da
 
 ---
 
-## Parte 3 — API (≈ 25 min)
+## Parte 3 — API
 
 Exponha os dados coletados na Parte 2:
 
